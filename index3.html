@@ -1,0 +1,30 @@
+﻿<div class="container" ng-controller="KahvelerinListesi">
+    <h3 style="margin-top:10px;color:darkred;text-align:center;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><strong> Her Fincanı Kırk Yıldan Fazla Hatırlı En İyi 3. Dalga Kahveciler</strong></h3>
+    <br />
+    <div class="row">
+        <div class="col-md-4"><img class="img-thumbnail" src="images/kahve1.jpg" /></div>
+        <div class="col-md-4"><img class="img-thumbnail" src="images/kahve2.jpg" /></div>
+        <div class="col-md-4"><img class="img-thumbnail" src="images/kahve3.jpg" /></div>
+    </div>
+    <br /><br />
+    <div class="col-md-12">
+        <table class="table table-hover">
+
+            <thead>
+                <tr>
+                    <th>Mekan Adı</th>
+                    <th>ADRES</th>
+                    <th>PEKİ SİZİN BEĞENDİKLERİNİZ HANGİSİ ?</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in kahveler">
+                    <td>{{item.mekan}}</td>
+                    <td>{{item.adres}}</td>
+                    <td><a href="#"><span class="glyphicon glyphicon-heart" style="color:red;"></span></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <kahvelerin-listesi></kahvelerin-listesi>
+</body>
+</html>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("KahvelerinListesi", kahveleriGetir);
+
+    kahveleriGetir.$inject = ["$scope"];
+    function kahveleriGetir($scope) {
+        $scope.kahveler = [{ mekan: 'Eagles Coffee & Food Studio', adres: 'Adres: Prof. Dr. Ahmet Taner Kışlalı Cad. 2846 Sokak Dora Park Villaları No:1/C Çayyolu Ankara' }, { mekan: ' F451 Brew', adres: 'Adres: John F. Kennedy Cd. No:31/C 06680 Çankaya, Ankara' }, { mekan: 'Lungo Espresso Bar', adres: 'Adres: Tunalı Hilmi Cad.Bülten Sk. No:26, 06680 Çankaya, Ankara' }, { mekan: 'Grano Coffee & Sandwiches', adres: 'Adres: Emek Mahallesi, Bişkek Caddesi, 3. Sokak, No 5/A, Çankaya, Ankara' }, { mekan: 'Crop Coffee Shop', adres: 'Adres:  Barbaros Mahallesi, Bülten Caddesi, No 18/B, Çankaya, Ankara' }, { mekan: 'Kraz Cafe', adres: 'Adres: Hilmi Barlas Yaşam Merkezi, 9G 2 Çayyolu,Çankaya, Ankara' }, { mekan: 'Prod Coffee Roastery', adres: 'Adres: Bahçelievler Mahallesi 49.Sokak 10/B (3.cadde), Ankara' }, { mekan: 'Koala Coffee Shop', adres: 'Adres: Barbaros Mahallesi, Bülten Sokak, No 21/C, Çankaya, Ankara' }];
+    }
+
+    app.directive("kahvelerinListesi", function () {
+        return {
+            restrict: 'E',
+            templateUrl: 'index3.html'
+        }
+    })
+</script>
